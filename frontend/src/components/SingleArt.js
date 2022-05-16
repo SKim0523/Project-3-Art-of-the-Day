@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
-import {useParams} from "react-router-dom" 
+import { useParams } from "react-router-dom";
 
 function SingleArt() {
   const [art, setArt] = useState(null);
-  const {artId} = useParams()
+  const { artId } = useParams();
 
+  // Fetch a random arkwork (or an arwork with an artId)
   const getArt = () => {
     fetch(
-      `https://api.artic.edu/api/v1/artworks/${artId || Math.floor(Math.random() * 116127)}?fields=id,title,image_id` // Using a function for both fetching a random arkwork and an arwork with an id
+      `https://api.artic.edu/api/v1/artworks/${
+        artId || Math.floor(Math.random() * 116127)
+      }?fields=title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year`
     )
       .then((response) => {
-        if (!response.ok) { 
-            throw new Error
+        if (!response.ok) {
+          throw Error;
         }
         return response.json();
-        })
+      })
       .then((response) => setArt(response.data))
       .catch((error) => {
         getArt();
       });
-    };
+  };
 
   useEffect(() => getArt(), []);
 
@@ -34,11 +37,12 @@ function SingleArt() {
         />
       </div>
       <div className="box-2">
-        <p className="title">{art.title}</p>
-        <p>Artist: {art.main_reference_number}</p>
-        <p>Style: {art.style_titles}</p>
-        <p>Medium: {art.medium_display}</p>
-        <p>Dimentions: {art.dimensions}</p>
+        <p className="title">{art.title || "Information not found"}</p>
+        <p><span className="list-item">Artist: </span>{art.artist_display || "Information not found"}</p>
+        <p><span className="list-item">Year: </span>{art.fiscal_year || "Information not found"}</p>
+        <p><span className="list-item">Style: </span>{art.style_title || "Information not found"}</p>
+        <p><span className="list-item">Medium: </span>{art.medium_display || "Information not found"}</p>
+        <p><span className="list-item">Dimentions: </span>{art.dimensions || "Information not found"}</p>
       </div>
     </div>
   );
