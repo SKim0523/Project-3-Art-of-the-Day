@@ -4,32 +4,21 @@
   /* background-color: #4b4f53 */
 /* } */
 
+/*NAVBAR*/
 .navbar {
   width: 100%;
-  height: 75px;
-  line-height: 75px;
+  height: 55px;
+  line-height: 60px;
   background-image: linear-gradient(#EFD345, #FFEF82);
 }
 
 .nav-text {
-  font-size: 55px;
+  font-size: 35px;
   font-family: 'Tangerine', cursive;
-  text-shadow: 0.7px 0.7px black;
-  color: black;
+  text-shadow: 0.3px 0.3px darkslategray;
+  color: darkslategray;
+  padding-top: 15px;
   padding-left: 20px;
-}
-
-.background-image {
-  background-image: url("https://i.imgur.com/1DzG66K.jpg");
-  /* background-color: rgba (0, 0, 0, .8);
-  background-blend-mode: multiply; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-  font-size: 10px;
-  /* filter: grayscale(30%); */
 }
 
 .home-icon {
@@ -38,34 +27,63 @@
   float: right;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+/*SEARCH BOX*/
+.background-image {
+  background-image: url("https://i.imgur.com/1DzG66K.jpg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
-  height: 75px;
-  line-height: 25px;
-  background-image: linear-gradient(#FFEF82,#EFD345);
-  font-size: 15px;
+  font-size: 10px;
+  font-family: 'Hind Siliguri', sans-serif;
+  /* filter: grayscale(30%); */
 }
 
+/* ART DISPLAY AREA*/
 .container {
   display:flex;
-  width: 100%;
+  width:100%;
+  flex-direction:row;
+  gap:5px;
 }
 
 .box-1 {
-  flex:70%;
-  margin-top: 10px;
+  flex: 2;
+  margin-top:10px;
   margin-right:5px;
   margin-left:5px;
+  background-color: beige;
+  padding: 10px auto 5px auto;
 }
 
 .box-2 {
-  flex:30%;
+  flex: 1;
   background-color: beige;
   margin-top: 10px;
   margin-right:5px;
   margin-left:5px;
-  
+  font-family: 'Hind Siliguri', sans-serif;
 }
+
+.loading-message {
+  font-family: 'Tangerine', cursive;
+  color: darkslategray;
+  font-size: 40px;
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  height: 60px;
+  line-height: 20px;
+  background-image: linear-gradient(#FFEF82,#EFD345);
+  font-size: 15px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
