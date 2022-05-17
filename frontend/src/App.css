@@ -27,6 +27,29 @@
   float: right;
 }
 
+/*HEADER IMAGE*/
+.header-image {
+  background-image: url("https://i.imgur.com/smdDHac.png?1");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.headerimage-text {
+  font-size: 50px;
+  font-family: "Tangerine", cursive;
+  color: white;
+  text-shadow: 1.7px 1.7px darkslategray;
+  margin: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
 /*SEARCH BOX*/
 .background-image {
   background-image: url("https://i.imgur.com/1DzG66K.jpg");
@@ -59,14 +82,14 @@
 
 .search-button {
   width: 100px;
-  height: 35px;
+  height: 40px;
   border-radius: 5px;
   font-family: "Hind Siliguri", sans-serif;
   background-color: darkslategray;
   color: white
 }
 
-/* ART DISPLAY AREA*/
+/* Random ART DISPLAY AREA*/
 .container {
   display: flex;
   width: 100%;
@@ -110,6 +133,8 @@
   font-size: 25px;
   padding-left: 20px;
 }
+
+/* 
 
 /* FOOTER */
 .footer {

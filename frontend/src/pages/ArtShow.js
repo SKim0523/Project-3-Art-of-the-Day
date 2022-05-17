@@ -1,5 +1,5 @@
+
 function ArtShow() {
- 
     return (
     <div>
     <h1>Random Art Show</h1>

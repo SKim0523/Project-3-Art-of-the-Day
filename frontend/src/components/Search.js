@@ -11,7 +11,7 @@ const Search = (props) => {
             onChange={props.handleChange}
             value={props.query}
             />
-            <Button onSubmit={props.handleSubmit} className="search-button" variant="outline-success">Search</Button>
+            <Button onClick={props.handleSubmit} className="search-button" variant="outline-success">Search</Button>
             </Form>
         </>
     )
