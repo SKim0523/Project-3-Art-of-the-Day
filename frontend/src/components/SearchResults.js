@@ -1,4 +1,5 @@
-import {Row, Col, Card} from 'react-bootstrap'
+import {Container, Row, Col, Card} from 'react-bootstrap'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 
 function SearchResults(props) {
   // // console.log(props)
@@ -8,33 +9,20 @@ function SearchResults(props) {
 
   const mapArtWork = props.results.map((art, idx) => {
       return(
-        <Row>
-          <Col xs={12} md={4} lg={3} key={idx}>
-        <Card className="cards">
-          <Card.Img
-          variant="top"
+       <div>
+         <img className="item"
           src={`https://www.artic.edu/iiif/2/${art.image_id}/full/400,/0/default.jpg`}
           alt="placeholder"
-          // alt={art.alt_text}
         />
-          <Card.Body>
-            <Card.Title>{art.title}</Card.Title>
-          </Card.Body>
-        </Card>
-        </Col>
-        </Row>
+       </div>
       )
     }
   )
-
   return(
-    <div>
-      <>
+    <div className="wrapper">
      {mapArtWork}
-    </>  
-    </div> 
+    </div>
   )
-  // return (<h1>hello</h1>)
 }
 
 export default SearchResults

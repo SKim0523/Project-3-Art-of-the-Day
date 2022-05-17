@@ -16,20 +16,21 @@
   font-size: 35px;
   font-family: "Tangerine", cursive;
   text-shadow: 0.3px 0.3px darkslategray;
-  color: black;
+  color: darkslategray;
   padding-top: 15px;
   padding-left: 20px;
 }
 
 .home-icon {
-  margin-top: 13px;
+  margin-top: 5px;
   margin-right: 20px;
   float: right;
+  color: darkslategray
 }
 
 /*HEADER IMAGE*/
 .header-image {
-  background-image: url("https://i.imgur.com/smdDHac.png?1");
+  background-image: url("https://i.imgur.com/OwpNzng.png?2");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,6 +49,16 @@
 
 .link {
   text-decoration: none;
+}
+
+.header-image2 {
+  background-image: url("https://i.imgur.com/smdDHac.png?1");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 /*SEARCH BOX*/
@@ -98,10 +109,8 @@
 }
 
 .box-1 {
-  flex: 2;
-  margin-top: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
+  flex: 1;
+  margin-right: 30px;
   background-color: beige;
   padding: 10px auto 5px auto;
 }
@@ -109,11 +118,10 @@
 .box-2 {
   flex: 1;
   background-color: beige;
-  margin-top: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
+  
   font-family: "Hind Siliguri", sans-serif;
   color: darkslategray;
+  font-size: 25px;
 }
 
 .loading-message {
@@ -134,7 +142,25 @@
   padding-left: 20px;
 }
 
-/* 
+/* SEARCHED IMAGES */
+.container {
+  width: 95%;
+  margin: 30px auto 30px auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px auto 20px auto;
+  background-color: rgb(249, 249, 249);
+  max-width: 1700px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
 
 /* FOOTER */
 .footer {
@@ -148,4 +174,5 @@
   background-image: linear-gradient(#ffef82, #efd345);
   font-size: 15px;
   font-family: "Hind Siliguri", sans-serif;
+  color: darkslategray
 }

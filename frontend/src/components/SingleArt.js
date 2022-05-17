@@ -10,7 +10,7 @@ function SingleArt() {
     fetch(
       `https://api.artic.edu/api/v1/artworks/${
         artId || Math.floor(Math.random() * 116127)
-      }?fields=title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year`
+      }?fields=title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&query[term][is_public_domain]=true`
     )
       .then((response) => {
         if (!response.ok) {
@@ -32,7 +32,7 @@ function SingleArt() {
     <div className="container">
       <div className="box-1">
         <img
-          src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`}
+          src={`https://www.artic.edu/iiif/2/${art.image_id}/full/600,/0/default.jpg`}
           alt={art.alt_text}
         />
       </div>
