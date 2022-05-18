@@ -32,18 +32,67 @@ function SingleArt() {
     <div className="container">
       <div className="box-1">
         <img
+          className="random-image"
           src={`https://www.artic.edu/iiif/2/${art.image_id}/full/600,/0/default.jpg`}
           alt={art.alt_text}
         />
       </div>
+
       <div className="box-2">
-        <p className="title">{art.title || "Information not found"}</p>
-        <p><span className="list-item">Artist: </span>{art.artist_display || "Information not found"}</p>
-        <p><span className="list-item">Year: </span>{art.fiscal_year || "Information not found"}</p>
-        <p><span className="list-item">Style: </span>{art.style_title || "Information not found"}</p>
-        <p><span className="list-item">Medium: </span>{art.medium_display || "Information not found"}</p>
-        <p><span className="list-item">Dimentions: </span>{art.dimensions || "Information not found"}</p>
+        <div>
+          <p className="title">"{art.title || "Information not found"}"</p>
+        </div><hr/>
+        <div className="art-detail card-body">
+          <p>
+            <span className="list-item">Artist: </span>
+            {art.artist_display || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Year: </span>
+            {art.fiscal_year || "Information not found"}
+          </p><hr/>
+          <p>
+            <span className="list-item">Style: </span>
+            {art.style_title || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Medium: </span>
+            {art.medium_display || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Dimentions: </span>
+            {art.dimensions || "Information not found"}
+          </p>
+        </div>
       </div>
+
+      {/* <div className="box-2">
+        <div className="art-title-section">
+          <p className="title">"{art.title || "Information not found"}"</p>
+        </div>
+        <div className="art-detail">
+          <p>
+            <span className="list-item">Artist: </span>
+            {art.artist_display || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Year: </span>
+            {art.fiscal_year || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Style: </span>
+            {art.style_title || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Medium: </span>
+            {art.medium_display || "Information not found"}
+          </p>
+          <p>
+            <span className="list-item">Dimentions: </span>
+            {art.dimensions || "Information not found"}
+          </p>
+        </div>
+      </div> */}
     </div>
   );
 }

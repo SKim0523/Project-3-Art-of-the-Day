@@ -6,14 +6,18 @@
 
 /*NAVBAR*/
 .navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 55px;
+  height: 60px;
   line-height: 60px;
   background-image: linear-gradient(#efd345, #ffef82);
+  opacity: 0.95; 
+  text-align: left !important;
 }
 
 .nav-text {
-  font-size: 35px;
+  font-size: 45px;
   font-family: "Tangerine", cursive;
   text-shadow: 0.3px 0.3px darkslategray;
   color: darkslategray;
@@ -34,13 +38,16 @@
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 50px;
   text-align: center;
+  
+  /* filter: saturate(40%); */
+  /* filter: grayscale(50%); */
 }
 
 .headerimage-text {
-  font-size: 50px;
+  font-size: 60px;
   font-family: "Tangerine", cursive;
   color: white;
   text-shadow: 1.7px 1.7px darkslategray;
@@ -89,6 +96,7 @@
   border-radius: 5px;
   font-family: "Hind Siliguri", sans-serif;
   padding-left: 10px;  
+  font-size: 15px;
 }
 
 .search-button {
@@ -97,31 +105,60 @@
   border-radius: 5px;
   font-family: "Hind Siliguri", sans-serif;
   background-color: darkslategray;
-  color: white
+  color: white;
+  font-size: 15px;
 }
 
 /* Random ART DISPLAY AREA*/
+
+/* .main-background {
+  
+} */
+
+.random-image {
+  margin: 30px auto 0 auto;
+}
 .container {
   display: flex;
   width: 100%;
   flex-direction: row;
   gap: 5px;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .box-1 {
   flex: 1;
-  margin-right: 30px;
-  background-color: beige;
-  padding: 10px auto 5px auto;
+  margin-right: 40px;
+  /* background-color: beige; */
+  /* padding-top: 30px; */
+  padding-bottom: 30px;
+  text-align: center;
+  border-radius: 1%;
+  box-shadow: 5px 5px 5px #e5e5e5;
+  border: solid 0.01px #d3d3d3;
+  background-color: white;
 }
 
 .box-2 {
   flex: 1;
-  background-color: beige;
-  
+  /* background-color: beige; */
   font-family: "Hind Siliguri", sans-serif;
   color: darkslategray;
   font-size: 25px;
+  padding: 15px 20px 0px 20px;
+  border-radius: 1%;
+  box-shadow: 5px 5px 5px #e5e5e5;
+  border: solid 0.01px #d3d3d3;
+}
+
+
+hr {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #efd345;
+  height: 2px
 }
 
 .loading-message {
@@ -131,7 +168,7 @@
 }
 
 .title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   text-align: center;
 }
@@ -142,10 +179,16 @@
   padding-left: 20px;
 }
 
+.art-detail {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
 /* SEARCHED IMAGES */
 .container {
   width: 95%;
-  margin: 30px auto 30px auto;
+  margin: 30px auto 100px auto;
 }
 
 .wrapper {
@@ -153,13 +196,31 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   margin: 20px auto 20px auto;
-  background-color: rgb(249, 249, 249);
   max-width: 1700px;
 }
 
 .item {
   display: flex;
   flex-direction: row;
+}
+
+.card {
+  border: solid 0.01px #d3d3d3;
+  border-radius: 1%;
+  box-shadow: 5px 5px 5px #e5e5e5;
+  text-align: center;
+  padding: 10px
+}
+
+.card-title {
+  color: darkslategray;
+  font-size: 25px;
+  text-align: center;
+}
+
+.card-text {
+  color: darkslategray;
+  
 }
 
 /* FOOTER */
@@ -174,5 +235,6 @@
   background-image: linear-gradient(#ffef82, #efd345);
   font-size: 15px;
   font-family: "Hind Siliguri", sans-serif;
-  color: darkslategray
+  color: darkslategray;
+  margin-top: 30px;
 }

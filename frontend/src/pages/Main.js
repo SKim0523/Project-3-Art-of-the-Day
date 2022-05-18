@@ -6,13 +6,15 @@ import NavOne from "../components/NavOne";
 function Main() {
   return (
     <div>
-      <NavOne />
       <div className="header-image">
+      <NavOne />
         <Link className="link" to={`/arts`}>
           <h1 className="headerimage-text">Explore more artworks</h1>
         </Link>
       </div>
+      <div className="main-background">
       <SingleArt />
+      </div>
     </div>
   );
 }
