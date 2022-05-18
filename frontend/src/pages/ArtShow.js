@@ -8,7 +8,7 @@ function ArtShow() {
       <NavTwo />
       <div className="header-image2">
         <Link className="link" to={`/arts`}>
-          <h1 className="headerimage-text">Explore more artworks</h1>
+          <h1 className="headerimage-text w3-animate-fading">Explore more artworks</h1>
         </Link>
       </div>
       <SingleArt />

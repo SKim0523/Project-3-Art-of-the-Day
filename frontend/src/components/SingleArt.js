@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 
 function SingleArt() {
   const [art, setArt] = useState(null);
-  const { artId } = useParams();
+  const {artId} = useParams();
 
   // Fetch a random arkwork (or an arwork with an artId)
   const getArt = () => {
     fetch(
       `https://api.artic.edu/api/v1/artworks/${
         artId || Math.floor(Math.random() * 116127)
-      }?fields=title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&query[term][is_public_domain]=true`
+      }?fields=id,title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&query[term][is_public_domain]=true`
     )
       .then((response) => {
         if (!response.ok) {
@@ -20,11 +20,12 @@ function SingleArt() {
       })
       .then((response) => setArt(response.data))
       .catch((error) => {
+          console.log(error)
         getArt();
       });
   };
 
-  useEffect(() => getArt(), []);
+  useEffect(() => {getArt()}, []);
 
   if (!art) return <h2 className="loading-message">Loading image.</h2>;
 

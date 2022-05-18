@@ -4,10 +4,12 @@ import NavTwo from "../components/NavTwo";
 
 function Arts() {
   return (
-    <div>
+    <div className="test">
       <NavTwo />
+      <div className="artspage-background">
       <SearchBox />
-      <SearchResults />
+      {/* <SearchResults /> */}
+      </div>
     </div>
   );
 }

@@ -9,12 +9,13 @@ function SearchBox() {
   function handleSubmit(e) {
     e.preventDefault();
     fetch(
-      `https://api.artic.edu/api/v1/artworks/search?fields=title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&limit=50&q=${query}&query[term][is_public_domain]=true`
+      `https://api.artic.edu/api/v1/artworks/search?fields=id,title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&limit=50&q=${query}&query[term][is_public_domain]=true`
     )
       .then((response) => {
         if (!response.ok) {
           throw Error;
         }
+        // console.log(response)
         return response.json();
       })
       .then((response) => setResults(response.data))
@@ -30,14 +31,14 @@ function SearchBox() {
   return (
     <div>
       <div className="background-image">
-        <h1 className="searchbox-title">Explore more artworks</h1>
+        <h1 className="searchbox-title w3-animate-fading">Explore more artworks</h1>
         <Search
           handleSubmit={handleSubmit}
           handleChange={handleChange}
           query={query}
         />
       </div>
-      <div>
+      <div >
         <SearchResults results={results} />
       </div>
     </div>

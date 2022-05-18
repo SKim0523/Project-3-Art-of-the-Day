@@ -4,15 +4,17 @@
 /* background-color: #4b4f53 */
 /* } */
 
+/* pattern used for "artspage-background" and "box-1" background is a minor modification of a project done by G V Tanish Vettrivel (https://codepen.io/gvtanish/pen/WNxWXjP?editors=1100)*/ 
+
 /*NAVBAR*/
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
+  height: 70px;
+  line-height: 70px;
   background-image: linear-gradient(#efd345, #ffef82);
-  opacity: 0.95; 
+  opacity: 0.95;
   text-align: left !important;
 }
 
@@ -29,7 +31,7 @@
   margin-top: 5px;
   margin-right: 20px;
   float: right;
-  color: darkslategray
+  color: darkslategray;
 }
 
 /*HEADER IMAGE*/
@@ -38,16 +40,16 @@
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding-top: 150px;
+  padding-bottom: 80px;
   text-align: center;
-  
+
   /* filter: saturate(40%); */
   /* filter: grayscale(50%); */
 }
 
 .headerimage-text {
-  font-size: 60px;
+  font-size: 65px;
   font-family: "Tangerine", cursive;
   color: white;
   text-shadow: 1.7px 1.7px darkslategray;
@@ -63,8 +65,8 @@
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 150px;
+  padding-bottom: 80px;
   text-align: center;
 }
 
@@ -74,8 +76,8 @@
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 150px;
+  padding-bottom: 80px;
   text-align: center;
   font-size: 10px;
   font-family: "Hind Siliguri", sans-serif;
@@ -83,7 +85,7 @@
 }
 
 .searchbox-title {
-  font-size: 50px;
+  font-size: 70px;
   font-family: "Tangerine", cursive;
   color: white;
   text-shadow: 1.7px 1.7px darkslategray;
@@ -92,11 +94,11 @@
 
 .input {
   width: 450px;
-  height: 35px;
+  height: 39px;
   border-radius: 5px;
   font-family: "Hind Siliguri", sans-serif;
-  padding-left: 10px;  
-  font-size: 15px;
+  padding-left: 10px;
+  font-size: 20px;
 }
 
 .search-button {
@@ -106,14 +108,10 @@
   font-family: "Hind Siliguri", sans-serif;
   background-color: darkslategray;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* Random ART DISPLAY AREA*/
-
-/* .main-background {
-  
-} */
 
 .random-image {
   margin: 30px auto 0 auto;
@@ -130,14 +128,27 @@
 .box-1 {
   flex: 1;
   margin-right: 40px;
-  /* background-color: beige; */
-  /* padding-top: 30px; */
   padding-bottom: 30px;
   text-align: center;
   border-radius: 1%;
   box-shadow: 5px 5px 5px #e5e5e5;
   border: solid 0.01px #d3d3d3;
-  background-color: white;
+  margin: 0;
+  background-color: #ffffff;
+  background-size: 48px 48px;
+  background-image: radial-gradient(
+      transparent 20px,
+      #f6f9f9 20px,
+      #f6f9f9 24px,
+      transparent 24px
+    ),
+    radial-gradient(
+      transparent 20px,
+      #f6f9f9 20px,
+      #f6f9f9 24px,
+      transparent 24px
+    );
+  background-position: 0 0, 24px 24px;
 }
 
 .box-2 {
@@ -152,19 +163,39 @@
   border: solid 0.01px #d3d3d3;
 }
 
-
 hr {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
   background-color: #efd345;
-  height: 2px
+  height: 2px;
 }
 
 .loading-message {
   font-family: "Tangerine", cursive;
   color: darkslategray;
-  font-size: 40px;
+  font-size: 70px;
+  text-align: center;
+  line-height: 400px;
+  /* padding-bottom: 250px; */
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  background-size: 48px 48px;
+  background-image: radial-gradient(
+      transparent 20px,
+      #f6f9f9 20px,
+      #f6f9f9 24px,
+      transparent 24px
+    ),
+    radial-gradient(
+      transparent 20px,
+      #f6f9f9 20px,
+      #f6f9f9 24px,
+      transparent 24px
+    );
+  background-position: 0 0, 24px 24px;
+  height:  35vh;
 }
 
 .title {
@@ -209,7 +240,8 @@ hr {
   border-radius: 1%;
   box-shadow: 5px 5px 5px #e5e5e5;
   text-align: center;
-  padding: 10px
+  padding: 10px;
+  background-color: white;
 }
 
 .card-title {
@@ -218,10 +250,37 @@ hr {
   text-align: center;
 }
 
-.card-text {
-  color: darkslategray;
-  
+.artspage-background {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  background-size: 48px 48px;
+  background-image: radial-gradient(
+      transparent 20px,
+      #f6f9f9 20px,
+      #f6f9f9 24px,
+      transparent 24px
+    ),
+    radial-gradient(
+      transparent 20px,
+      #f6f9f9 20px,
+      #f6f9f9 24px,
+      transparent 24px
+    );
+  background-position: 0 0, 24px 24px;
+  height: 100%;
+  /* background-size: cover; */
 }
+
+.no-results-message {
+  font-family: "Tangerine", cursive;
+  color: darkslategray;
+  font-size: 60px;
+  text-align: center;
+  line-height: 250px;
+  height: 27vh;
+}
+
 
 /* FOOTER */
 .footer {
@@ -230,10 +289,10 @@ hr {
   width: 100%;
   text-align: center;
   align-items: center;
-  height: 60px;
-  line-height: 20px;
+  height: 90px;
+  line-height: 25px;
   background-image: linear-gradient(#ffef82, #efd345);
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Hind Siliguri", sans-serif;
   color: darkslategray;
   margin-top: 30px;

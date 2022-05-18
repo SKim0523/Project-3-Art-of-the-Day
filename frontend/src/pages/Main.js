@@ -9,7 +9,7 @@ function Main() {
       <div className="header-image">
       <NavOne />
         <Link className="link" to={`/arts`}>
-          <h1 className="headerimage-text">Explore more artworks</h1>
+          <h1 className="headerimage-text w3-animate-fading">Explore more artworks</h1>
         </Link>
       </div>
       <div className="main-background">
