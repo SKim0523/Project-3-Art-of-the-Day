@@ -23,13 +23,6 @@ React Frontend Project
 - As a user, I want to enter a search term in a search box to retrieve relevant art works. 
 -  As a user, I want to click on an individual art to view additional details about it, including title of the art, artist, production year, medium and style.
 
-## Component Details:
-- App (State): Makes the initial data request and include React Router
-- Header with logo (Props): Renders header for the Home page
-- Header with logo and home button (Props): Renders header for the Search and Show page
-- Art of the Day (Props): Renders a random art work for the day on the Home page
-- Show page (Props): Renders a specific art 
-
 ## Technologies Used:
 - React
 - JavaScript/JSX
