@@ -2,7 +2,7 @@ import { Form, FormControl, Button } from "react-bootstrap";
 const Search = (props) => {
   return (
     <>
-      <Form>
+      <Form onSubmit={props.handleSubmit}>
         <FormControl
           placeholder="Enter keyword"
           className="input"
@@ -11,13 +11,10 @@ const Search = (props) => {
           onChange={props.handleChange}
           value={props.query}
         />
-        <Button
-          onClick={props.handleSubmit}
-          className="search-button"
-          variant="outline-success"
-        >
-          Search
-        </Button>
+        <Button 
+        className="search-button"
+        type="submit"
+        >Search</Button>
       </Form>
     </>
   );

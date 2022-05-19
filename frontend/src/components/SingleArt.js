@@ -10,12 +10,13 @@ function SingleArt() {
     fetch(
       `https://api.artic.edu/api/v1/artworks/${
         artId || Math.floor(Math.random() * 116127)
-      }?fields=id,title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&query[term][is_public_domain]=true`
+      }?fields=id,alt_text,title,image_id,artist_display,style_title,medium_display,dimensions,fiscal_year&query[term][is_public_domain]=true`
     )
       .then((response) => {
         if (!response.ok) {
-          throw Error;
+          throw new Error('Art not found.');
         }
+        console.log(response)
         return response.json();
       })
       .then((response) => setArt(response.data))
@@ -25,7 +26,10 @@ function SingleArt() {
       });
   };
 
-  useEffect(() => {getArt()}, []);
+  useEffect(() => {
+      console.log('getting art')
+      getArt()
+    }, []);
 
   if (!art) return <h2 className="loading-message">Loading image.</h2>;
 
@@ -66,34 +70,6 @@ function SingleArt() {
           </p>
         </div>
       </div>
-
-      {/* <div className="box-2">
-        <div className="art-title-section">
-          <p className="title">"{art.title || "Information not found"}"</p>
-        </div>
-        <div className="art-detail">
-          <p>
-            <span className="list-item">Artist: </span>
-            {art.artist_display || "Information not found"}
-          </p>
-          <p>
-            <span className="list-item">Year: </span>
-            {art.fiscal_year || "Information not found"}
-          </p>
-          <p>
-            <span className="list-item">Style: </span>
-            {art.style_title || "Information not found"}
-          </p>
-          <p>
-            <span className="list-item">Medium: </span>
-            {art.medium_display || "Information not found"}
-          </p>
-          <p>
-            <span className="list-item">Dimentions: </span>
-            {art.dimensions || "Information not found"}
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 }

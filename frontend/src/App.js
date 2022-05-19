@@ -10,9 +10,8 @@ import ArtShow from './pages/ArtShow';
 function App() {
   return (
     <div className="test">
-      {/* <SearchBox /> */}
       <Routes>
-        <Route exact path="/" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/arts" element={<Arts />} />
         <Route path="/arts/:artId" element={<ArtShow />} />
       </Routes>

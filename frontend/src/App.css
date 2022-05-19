@@ -1,10 +1,4 @@
-/* .nav-color { */
-/* background-color: #FFF323; */
-/* background-color: gold; */
-/* background-color: #4b4f53 */
-/* } */
-
-/* pattern used for "artspage-background" and "box-1" background is a minor modification of a project done by G V Tanish Vettrivel (https://codepen.io/gvtanish/pen/WNxWXjP?editors=1100)*/ 
+/* Citation: pattern used for "artspage-background" and "box-1" background is a minor modification of a project done by G V Tanish Vettrivel (https://codepen.io/gvtanish/pen/WNxWXjP?editors=1100)*/ 
 
 /*NAVBAR*/
 .navbar {
@@ -43,7 +37,6 @@
   padding-top: 150px;
   padding-bottom: 80px;
   text-align: center;
-
   /* filter: saturate(40%); */
   /* filter: grayscale(50%); */
 }
@@ -116,13 +109,12 @@
 .random-image {
   margin: 30px auto 0 auto;
 }
+
 .container {
   display: flex;
   width: 100%;
   flex-direction: row;
   gap: 5px;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .box-1 {
@@ -153,7 +145,6 @@
 
 .box-2 {
   flex: 1;
-  /* background-color: beige; */
   font-family: "Hind Siliguri", sans-serif;
   color: darkslategray;
   font-size: 25px;
@@ -177,7 +168,6 @@ hr {
   font-size: 70px;
   text-align: center;
   line-height: 400px;
-  /* padding-bottom: 250px; */
   padding: 0;
   margin: 0;
   background-color: #ffffff;
@@ -216,12 +206,12 @@ hr {
   font-size: 20px;
 }
 
-/* SEARCHED IMAGES */
 .container {
   width: 95%;
   margin: 30px auto 100px auto;
 }
 
+/* SEARCHED IMAGES */
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -269,7 +259,6 @@ hr {
     );
   background-position: 0 0, 24px 24px;
   height: 100%;
-  /* background-size: cover; */
 }
 
 .no-results-message {
@@ -280,7 +269,6 @@ hr {
   line-height: 250px;
   height: 27vh;
 }
-
 
 /* FOOTER */
 .footer {

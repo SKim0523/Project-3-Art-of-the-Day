@@ -3,7 +3,7 @@ import { Navbar } from "react-bootstrap";
 function NavOne() {
   return (
     <div className="navbar">
-      <Navbar className="nav-color" variant="light">
+      <Navbar>
         <Navbar.Brand className="nav-text">
           Art of the Day _
           <svg

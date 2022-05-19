@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavTwo() {
   return (
     <div className="navbar">
-      <Navbar className="nav-color" variant="light">
+      <Navbar>
         <Navbar.Brand className="nav-text">
           Art of the Day_
           <svg
