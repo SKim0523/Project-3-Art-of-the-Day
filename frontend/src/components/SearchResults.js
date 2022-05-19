@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 
 function SearchResults(props) {
-  if (!props.results) return null;
+  // if (!props.results) return null;
+  if (!props.results)
+    return (
+      <p className="no-results-message">
+      Please enter a keyword to retrieve artworks.
+      </p>
+    );
   if (props.results.length === 0)
     return (
       <p className="no-results-message">
