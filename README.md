@@ -38,7 +38,7 @@ React Frontend Project
 
 1. Install Visual Studio Code (VS Code)
 2. Fork and clone the following repository: https://github.com/SKim0523/Project-3-Art-of-the-Day.git
-3. Inside your VS Code, Run "npm i" and then "npm start"
+3. Inside your VS Code terminal, run "npm i" and then "npm start"
 4. App will automatically open in the browser (Google Chrome).
 
 ## API:
@@ -46,10 +46,12 @@ https://api.artic.edu/docs/#introduction
  
 ### API keyword Search example
 https://api.artic.edu/api/v1/artworks/search?q=flowers
-<img width="526" alt="Screen Shot 2022-05-13 at 3 56 32 PM" src="https://user-images.githubusercontent.com/79298250/168386442-b627abad-102f-4ea0-ac8b-3c6fa6eb7291.png">
+![Screen Shot 2022-05-19 at 11 51 14 AM](https://user-images.githubusercontent.com/79298250/169343211-5888ad93-2c22-4029-a7bf-e561f8ce657c.png)
+
 
 ### API specific Image Search example
-<img width="919" alt="Screen Shot 2022-05-13 at 3 32 06 PM" src="https://user-images.githubusercontent.com/79298250/168386569-92d6f74d-ce02-4b97-9f8e-d3bf06c9a43f.png">
+https://www.artic.edu/iiif/2/1adf2696-8489-499b-cad2-821d7fde4b33/full/843,/0/default.jpg
+![Screen Shot 2022-05-19 at 11 53 19 AM](https://user-images.githubusercontent.com/79298250/169344025-6ff6c296-3378-454c-984b-7f8d2b456cda.png)
 
 ## Next Steps:
 Goging forward, I would like to add below functionalities.
